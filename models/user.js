@@ -13,11 +13,11 @@ const userSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
-    ammount_credited:{
+    amount_credited:{
         type: Number,
         default: 0 
     },
-    ammount_debited:{
+    amount_debited:{
         type: Number,
         default: 0 
     }
