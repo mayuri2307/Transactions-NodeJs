@@ -5,7 +5,7 @@ const registerUser = async (req, res) => {
     const {username, password} = req.body
     const existingUser = await User.findOne({username})
     if(existingUser) return res.status(404).json({message: "User already exist"})
-    const hashedPassword = bcrypt.hashSync(password, 10);
+    const hashedPassword = bcrypt.hashSync(password, 12);
     const user = {
         username,
         password: hashedPassword
